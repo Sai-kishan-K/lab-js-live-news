@@ -9,13 +9,16 @@ function getNewsUS(){
     .then(data=>{
         console.log(data);
         //Div 1
-        document.getElementById('img1').src = data.articles[0].urlToImage;
-        document.getElementById('heading1').innerHTML = data.articles[0].title;
-        document.getElementById('content1').innerHTML = data.articles[0].description;
+        for(var i=0; i<data.articles.length; i++){
+        document.getElementById('img1').src = data.articles[i].urlToImage;
+        document.getElementById('heading1').innerHTML = data.articles[i].title;
+        document.getElementById('content1').innerHTML = data.articles[i].description;
         //Div 2
-        document.getElementById('img2').src = data.articles[1].urlToImage;
-        document.getElementById('heading2').innerHTML = data.articles[1].title;
-        document.getElementById('content2').innerHTML = data.articles[1].description;
+        i++;
+        document.getElementById('img2').src = data.articles[i].urlToImage;
+        document.getElementById('heading2').innerHTML = data.articles[i].title;
+        document.getElementById('content2').innerHTML = data.articles[i].description;
+        }
     })
     .catch(err =>{
         document.getElementById('error').innerHTML = err;
