@@ -9,7 +9,7 @@ function getNewsUS(){
     .then(data=>{
         console.log(data);
         //Div 1
-        for(var i=0; i<data.articles.length; i++){
+        for(var i=0; i<10; i++){
         document.getElementById('img1').src = data.articles[i].urlToImage;
         document.getElementById('heading1').innerHTML = data.articles[i].title;
         document.getElementById('content1').innerHTML = data.articles[i].description;
@@ -18,6 +18,11 @@ function getNewsUS(){
         document.getElementById('img2').src = data.articles[i].urlToImage;
         document.getElementById('heading2').innerHTML = data.articles[i].title;
         document.getElementById('content2').innerHTML = data.articles[i].description;
+        //Div 3
+        i++;
+        document.getElementById('img3').src = data.articles[i].urlToImage;
+        document.getElementById('heading3').innerHTML = data.articles[i].title;
+        document.getElementById('content3').innerHTML = data.articles[i].description;
         }
     })
     .catch(err =>{
