@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#home">ProGrad News app</a></li>
+        <li><a href="#news">Top</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Country</a>
+          <div class="dropdown-content">
+            <p class='content' onclick="getNewsIndia()">IN: India</p>
+            <p class="content" onclick="getNewsUS()">US: United States</p>
+          </div>
+        </li>
+      </ul>
+      <div class="container">
+      <div class="news" id="div1"><img src="" class="images" id="img1" alt="">
+        <h3 class="heading" id="heading1"></h3>
+        <p class="news-content" id="content1"></p>
+    </div>
+      <div class="news" id="div2"><img src="" class="images" id="img2" alt="">
+        <h3 class="heading" id="heading2"></h3>
+        <p class="news-content" id="content2"></p>
+    </div>
+      <div class="news" id="div3"><img src="" class="images" id="img3" alt="">
+        <h3 class="heading" id="heading3"></h3>
+        <p class="news-content" id="content3"></p>
+    </div>
+</div>
+<div id="error"></div>
+<script src="app.js"></script>
+</body>
+</html>
